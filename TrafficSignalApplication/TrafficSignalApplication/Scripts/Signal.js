@@ -20,7 +20,7 @@
     hub.client.pushMessage = function (message) {
         var myArray = [];
         $.each(message, function (signal, states) {
-            console.log('Current signal : ' + signal + 'and States ' + ' Left : ' + states['Left'] + 'Main : ' + states['Main'] + ' Right : ' + states['Right']);
+            console.log('Current signal : ' + signal + ' and States are ' + ', Left : ' + states['Left'] + ', Main : ' + states['Main'] + ' Right : ' + states['Right']);
             myArray.push({ signal: signal, sigMain: states['Main'], sigRight: states['Right'], sigLeft: states['Left'] });
         });
         assignSignalStates(myArray);
