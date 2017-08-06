@@ -5,7 +5,7 @@
     function init() {
         return hub.server.send('Welcome to Traffic signal App').done(function (msg) {
             console.log('Initialize Hub ' + msg);
-            animateMe($('#object1'), 3000);
+            
         });
     }
 
