@@ -1,0 +1,264 @@
+﻿@{
+    Layout = null;
+}
+<html>
+<head>
+    <title>Traffic signals at junction</title>
+    <style type="text/css">
+        
+        .container
+        {
+            background-color: #99CCFF;
+            border: thick solid #808080;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .trafficlight
+        {
+            width: 60px;
+            margin: auto;
+        }
+
+        .box
+        {
+            height: 75px;
+            width: 45px;
+            background: black;
+            border: 6px solid lightgrey;
+        }
+
+        .toppole
+        {
+            height: 60px;
+            width: 15px;
+            background: black;
+            margin-left: 21px;
+        }
+
+        .smallbox
+        {
+            height: 60px;
+            width: 25px;
+            background: black;
+            border: 6px solid lightgrey;
+            margin-left: 5px;
+        }
+
+        .word
+        {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .bottompole
+        {
+            height: 150px;
+            width: 20px;
+            background: black;
+            margin-left: 21px;
+        }
+
+        .light
+        {
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            margin-left: 15px;
+            margin-top: 8px;
+        }
+
+        .red
+        {
+            background-color: red;
+        }
+
+        .orange
+        {
+            background-color: orange;
+            opacity: 0.4;
+        }
+
+        .green
+        {
+            background-color: green;
+            opacity: 0.4;
+        }
+
+        .container1
+        {
+            display: block;
+            margin: 0;
+            padding: 0;
+            width: 180px;
+            height: 70px;
+            outline: 1px solid #444;
+        }
+
+        .left
+        {
+            float: left;
+            display: block;
+            margin: 0;
+            padding: 0;
+            width: 50px;
+            height: 50px;
+        }
+
+        center
+        {
+            float: left;
+            display: block;
+            margin: 0;
+            padding: 0;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="welcomemsg"></div>
+    <div class="container">
+        <input type="button" id="startSignal" value="Start Signal" />
+        <input type="button" id="stopSignal" value="Stop Signal" />
+    </div>
+    <div>
+        <table style="width: 100%">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    
+                </td>
+                <td>
+                    
+                    <div id="Signal1" class="trafficlight center" >
+                        <div class="box ">
+                            <div id="Signal1Redlight" class="red light">
+                            </div>
+                            <div id="Signal1Orangelight" class="orange light">
+                            </div>
+                            <div id="Signal1Greenlight" class="green light">
+                            </div>
+                        </div>
+                        <div class="toppole">
+                        </div>
+                    </div>
+                    
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>
+                    <div id="Signal2" class="trafficlight">
+                        <div class="box">
+                            <div id="Signal2Redlight" class="red light">
+                            </div>
+                            <div id="Signal2Orangelight" class="orange light">
+                            </div>
+                            <div id="Signal2Greenlight" class="green light">
+                            </div>
+                        </div>
+                        <div class="toppole">
+                        </div>
+                    </div>
+                </td>
+                <td></td>
+                <td>
+                    <div id="Signal3" class="trafficlight">
+                        <div class="box">
+                            <div id="Signal3Redlight" class="red light">
+                            </div>
+                            <div id="Signal3Orangelight" class="orange light">
+                            </div>
+                            <div id="Signal3Greenlight" class="green light">
+                            </div>
+                        </div>
+                        <div class="toppole">
+                        </div>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+
+                    <div id="Signal4" class="trafficlight">
+                        <div class="box">
+                            <div id="Signal4Redlight" class="red light">
+                            </div>
+                            <div id="Signal4Orangelight" class="orange light">
+                            </div>
+                            <div id="Signal4Greenlight" class="green light">
+                            </div>
+                        </div>
+                        <div class="toppole">
+                        </div>
+                    </div>
+
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <!--Script references. -->
+    <!--Reference the jQuery library. -->
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.2.2.min.js"></script>
+    <!--Reference the autogenerated SignalR hub script. -->
+    <script src="/signalr/hubs"></script>
+    <!--Add script to update the page and send messages.-->
+    <script src="~/Scripts/Signal.js"></script>
+</body>
+</html>
+
